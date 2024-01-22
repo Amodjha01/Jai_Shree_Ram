@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000; /* Optional: Set a background color */
+  }
+  
+  #ramBhakt {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #ramBhakt .ram {
+    position: absolute;
+    font-size: 8rem;
+    line-height: 14rem;
+    opacity: 0;
+    font-family: "Anton", sans-serif;
+    mix-blend-mode: screen;
+  }
+  
+  #ramBhakt .ram:nth-child(1){
+      color: #fd3203;
+      -webkit-clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0% 90%);
+      clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0% 90%);
+      transform-origin: center bottom;
+      animation: fly1 5s cubic-bezier(0.36, 0.1, 0.16, 1) infinite alternate;
+  }
+  
+  @keyframes fly1 {
+      0% {
+          transform: translateY(0);
+          opacity: 0;
+      }
+      100% {
+          transform: translateY(-50%);
+          opacity: 1;
+      }
+  }
+  
